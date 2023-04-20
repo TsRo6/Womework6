@@ -4,20 +4,114 @@ body{
 
 .container {  display: grid;
     grid-template-columns: 1.5fr 0.5fr;
-    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.2fr 4fr 0.2fr;
     gap: 20px 30px;
     grid-auto-flow: row;
     grid-template-areas:
       "header header"
       "continut sideBar"
       "footer footer";
+      font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.header  a{
+    color: white;
+}
+
+.curs a{
+    color: black;
+}
+
+.footer a{
+    color: white;
+}
+
+/* HEADER */
+.header { 
+    grid-area: header;
+    background-color: rgb(24, 31, 76);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+.navObt{
+    justify-self: flex-end;
+    margin-right: 100px;
+}
+
+.navObt a{
+    margin-right: 10px;
+}
+
+img{
+    margin-left: 100px;
+    animation-name: run;
+}
+
+/* img:hover{
+    
+} */
+
+/* CONTINUT */
+.continut { 
+    grid-area: continut; 
+    margin-left: 110px;
+}
+
+.curs{
+    display: grid;
+    grid-template-columns: 35% 35%;
+    grid-row-gap: 20px;
+    grid-column-gap: 40px;
+}
+
+.spin {
+    width: 10px;
+    height: 5px;
+    background: red;
+    position: relative;
+    animation: myfirst 5s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;  
+}
+  
+  @keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px; width: 100px;}
+    25%  {background: yellow; left: 620px; top: 0px; width: 50px;}
+    50%  {background: blue; left: 620px; top: 75px; width: 10px;}
+    75%  {background: green; left: 0px; top: 75px; width: 100px;}
+    100% {background: red; left: 0px; top: 0px; width: 10px;}
   }
+
+.cursulMeu{
+    border-bottom: solid 3px chocolate;
+}
   
-  .continut { grid-area: continut; }
+.footer { 
+    grid-area: footer; 
+    background-color: rgb(24, 31, 76);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+.contactInfo{
+    margin-left: 300px;
+}
+
+.locatiaMea{
+    margin-left: 200px;
+}
   
-  .header { grid-area: header; }
-  
-  .footer { grid-area: footer; }
-  
-  .sideBar { grid-area: sideBar; }
-  
+/* .sideBar { 
+    grid-area: sideBar;
+    
+} */
