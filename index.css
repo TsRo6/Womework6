@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    gap: 20px 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "continut sideBar"
+      "footer footer";
+  }
+  
+  .continut { grid-area: continut; }
+  
+  .header { grid-area: header; }
+  
+  .footer { grid-area: footer; }
+  
+  .sideBar { grid-area: sideBar; }
+  
