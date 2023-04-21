@@ -83,35 +83,50 @@ img{
     animation-iteration-count: infinite;  
 }
   
-  @keyframes myfirst {
-    0%   {background: red; left: 0px; top: 0px; width: 100px;}
-    25%  {background: yellow; left: 620px; top: 0px; width: 50px;}
-    50%  {background: blue; left: 620px; top: 75px; width: 10px;}
-    75%  {background: green; left: 0px; top: 75px; width: 100px;}
-    100% {background: red; left: 0px; top: 0px; width: 10px;}
-  }
-
 .cursulMeu{
     border-bottom: solid 3px chocolate;
 }
-  
+
+.cursulMeu:hover{
+    width: 40px;
+    height: 40px;
+}
+
+
 .footer { 
     grid-area: footer; 
     background-color: rgb(24, 31, 76);
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    text-align: center;
     padding: 10px;
 }
+
 .contactInfo{
-    margin-left: 300px;
+    display: grid;
 }
 
 .locatiaMea{
-    margin-left: 200px;
+    display: grid;
 }
   
-/* .sideBar { 
+.sideBar { 
     grid-area: sideBar;
-    
-} */
+    display: flex;
+    justify-content: column-reverse;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+@keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px; width: 100px;}
+    25%  {background: yellow; left: 750px; top: 0px; width: 50px;}
+    50%  {background: blue; left: 750px; top: 90px; width: 10px;}
+    75%  {background: green; left: 0px; top: 90px; width: 100px;}
+    100% {background: red; left: 0px; top: 0px; width: 10px;}
+}
+
+
+
+
